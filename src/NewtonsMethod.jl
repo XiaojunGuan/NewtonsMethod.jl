@@ -10,7 +10,7 @@ function newtonroot(f, f_prime; x₀ = 1.0, tolerance = 1E-7, maxiter = 1000)
     while normdiff > tolerance && iter <= maxiter
         x_new = x_old - f(x_old)/f_prime(x_old)
         normdiff = norm(x_new - x_old)
-        x_old = ]x_new
+        x_old = x_new
         iter = iter + 1
     end
 
